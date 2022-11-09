@@ -1,0 +1,101 @@
+
+.contenedor{
+    width: 370px;
+    height: 410px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px ;
+    background: rgb(255, 255, 255);
+  }
+  
+  
+
+  h2 {
+  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+  }
+  .form-group{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+  }
+  
+
+  
+  input {
+    position: relative;
+    width: 100%;
+/*     text-align: center; */
+    margin-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  input[type="text"],  input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(14, 14, 14);
+    font-size: 16px;
+  }
+  
+button{
+    border: none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    
+    width: 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    height: 40px;
+    background: rgb(11, 12, 90) 100%;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  
+ button:hover {
+    cursor: pointer;
+    background-color: rgb(2, 10, 128);
+    transition: 0.1s ease-in-out;
+  }
+  
+  
+  
+  @media   (max-width: 357px){
+    .Contenedor{
+        width: 200px;
+        height: 400px;
+    }
+  }
+  svg{
+    color: black;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 42px;
+    translate: 50%;
+    transform: translateY(-100%);
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }

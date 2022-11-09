@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Login} from './components/LOGIN/Login';
+import { Route, Routes } from "react-router-dom";
+import { useEffect,useState } from "react";
 
-function App() {
+interface Datos{
+  user:string,
+  password:string,
+  roles:string,
+}
+
+
+const App: React.FC = () => {
+  const [datos, setDatos] = useState<Datos[]>([{
+    user:"franco" , password:"12345", roles:"admin"
+  }])
+  useEffect(() => { localStorage.setItem("user", JSON.stringify(datos));
+  }, [datos])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Login/>}></Route>
+        </Routes>
+      
     </div>
   );
 }
